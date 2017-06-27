@@ -1,0 +1,100 @@
+/*.weatherfield {
+  font-family: "Lato", Helvetica, sans-serif;
+  font-size: 100px;
+  color: white;
+  border: thin white solid;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+}*/
+
+.weatherfield {
+  font-family: "Lato", Helvetica, sans-serif;
+  color: white;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  text-align: center;
+}
+
+.city {
+  font-size: 50px;
+}
+
+.weather {
+  font-size: 100px;
+}
+
+.toggle {
+  font-size: 25px;
+}
+
+.toggle:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+.credit {
+  font-size: 10px;
+
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+/* BACKGROUNDS */
+
+.clearSky {
+  background: url(http://i1076.photobucket.com/albums/w453/badcs/Graphics/pexels-photo-403071_zpsvibhyffg.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.clearNight {
+  background: url(http://i1076.photobucket.com/albums/w453/badcs/Graphics/pexels-photo-250072%20original_zpsketxkrwh.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.cloudyDay {
+  background: url(http://i1076.photobucket.com/albums/w453/badcs/Graphics/clouds-cloudporn-weather-lookup-158163%20original_zpscuqjsttd.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.cloudyNight {
+  background: url(http://i1076.photobucket.com/albums/w453/badcs/Graphics/pexels-photo-239107%20original_zpskaxikobc.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.rainy {
+  background: url(http://i1076.photobucket.com/albums/w453/badcs/Graphics/pexels-photo-134651_zpskbce624l.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.thunderstorm {
+  background: url(http://i1076.photobucket.com/albums/w453/badcs/Graphics/pexels-photo-29095%20original_zpsc9zmhfnv.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.snowyDay {
+  background: url(http://i1076.photobucket.com/albums/w453/badcs/Graphics/pexels-photo%201_zps4mmwmqdi.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.snowyNight {
+  background: url(http://i1076.photobucket.com/albums/w453/badcs/Graphics/winter-1943341_1920_zpsjyt1sazp.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.misty {
+  background: url(http://i1076.photobucket.com/albums/w453/badcs/Graphics/pexels-photo-104907_zpswimv3yqo.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
