@@ -1,0 +1,87 @@
+.weatherfield {
+  font-family: "Lato", Helvetica, sans-serif;
+  color: white;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  text-align: center;
+}
+
+.city {
+  font-size: 50px;
+}
+
+.weather {
+  font-size: 100px;
+}
+
+.toggle {
+  font-size: 25px;
+}
+
+.toggle:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+.credit {
+  font-size: 10px;
+
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+/* BACKGROUNDS */
+
+.clearSky {
+  background: url('images/clearsky.JPEG') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.clearNight {
+  background: url('images/clearnight.JPEG') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.cloudyDay {
+  background: url('images/cloudyday.JPEG') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.cloudyNight {
+  background: url('images/cloudynight.JPEG') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.rainy {
+  background: url('images/rainy.JPEG') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.thunderstorm {
+  background: url('images/thunderstorm.JPG') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.snowyDay {
+  background: url('images/snowyday.JPG') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.snowyNight {
+  background: url('images/snowynight.JPG') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.misty {
+  background: url('images/misty.JPEG') no-repeat center center fixed;
+  background-size: cover;
+}
