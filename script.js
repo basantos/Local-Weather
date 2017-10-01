@@ -47,7 +47,6 @@ $(document).ready(function(){
           $("body").addClass("misty");
           break;
       }
-      //$(".icon").html("<img src='http://openweathermap.org/img/w/" + json.weather[0].icon + ".png'><img>");
     });
   });
 
