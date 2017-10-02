@@ -6,9 +6,9 @@ $(document).ready(function(){
     $(".city").html(data.city);
     var weatherURL = "https://api.apixu.com/v1/current.json?key=92295dd90554405cacd181238170210&q=" + data.latitude + "," + data.longitude;
     $.getJSON(weatherURL,function(json){
-      fahrenheit = json.current.temp_f.toFixed(2);
+      fahrenheit = Math.round(json.current.temp_f);
       $(".weather").html(fahrenheit + "&deg;F");
-      handleData();
+      switchBetweenFAndC();
       switch(json.current.condition.text){
         case "Sunny":
           $("body").addClass("clearSky");
@@ -94,27 +94,19 @@ $(document).ready(function(){
     });
   });
 
-  function handleData(){
+  function switchBetweenFAndC(){
     $(".toC").on("click",function(){
-      toCelsius();
+      celsius = (fahrenheit-32)/1.8;
+      $(".weather").html(Math.round(celsius) + "&deg;C");
       $(".toC").html("");
       $(".toF").html("&deg;F");
     });
     $(".toF").on("click",function(){
-      toFahrenheit();
+      fahrenheit = celsius*1.8 + 32;
+      $(".weather").html(Math.round(fahrenheit) + "&deg;F");
       $(".toF").html("");
       $(".toC").html("&deg;C");
     });
-  }
-
-  function toCelsius(){
-    celsius = (fahrenheit-32)/1.8;
-    $(".weather").html(celsius.toFixed(2) + "&deg;C");
-  }
-
-  function toFahrenheit(){
-    fahrenheit = celsius*1.8 + 32;
-    $(".weather").html(fahrenheit.toFixed(2) + "&deg;F")
   }
 
 });
