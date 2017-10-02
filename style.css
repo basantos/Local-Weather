@@ -26,8 +26,8 @@
 }
 
 .credit {
-  font-size: 10px;
-
+  font-size: 13px;
+  font-weight: bold;
 }
 
 a {
@@ -52,7 +52,7 @@ a:hover {
 }
 
 .cloudyDay {
-  background: url('images/cloudyday.JPEG') no-repeat center center fixed;
+  background: url('images/cloudyday.JPG') no-repeat center center fixed;
   background-size: cover;
 }
 

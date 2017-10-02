@@ -4,46 +4,90 @@ $(document).ready(function(){
 
   $.getJSON("https://ipapi.co/json/", function(data){
     $(".city").html(data.city);
-    var weatherURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + data.latitude + "&lon=" + data.longitude + "&appid=497713a7d3c7c4e180e1f429a14e06f1";
+    var weatherURL = "https://api.apixu.com/v1/current.json?key=92295dd90554405cacd181238170210&q=" + data.latitude + "," + data.longitude;
     $.getJSON(weatherURL,function(json){
-      fahrenheit = 1.8 * (json.main.temp - 273) + 32;
-      $(".weather").html(fahrenheit.toFixed(2) + "&deg;F");
+      fahrenheit = json.current.temp_f.toFixed(2);
+      $(".weather").html(fahrenheit + "&deg;F");
       handleData();
-      switch(json.weather[0].icon){
-        case "01d":
-        case "02d":
+      switch(json.current.condition.text){
+        case "Sunny":
           $("body").addClass("clearSky");
           break;
-        case "01n":
-        case "02n":
+        case "Clear":
           $("body").addClass("clearNight");
           break;
-        case "03d":
-        case "04d":
-          $("body").addClass("cloudyDay");
+        case "Partly cloudy":
+        case "Cloudy":
+        case "Overcast":
+          if(json.current.is_day === 1){
+            $("body").addClass("cloudyDay");
+          } else {
+            $("body").addClass("cloudyNight");
+          }
           break;
-        case "03n":
-        case "O4n":
-          $("body").addClass("cloudyNight");
-          break;
-        case "09d":
-        case "09n":
-        case "10d":
-        case "10n":
+        case "Patchy rain possible":
+        case "Light drizzle":
+        case "Thundery":
+        case "Patchy sleet possible":
+        case "Patchy freezing drizzle possible":
+        case "Thundery outbreaks possible":
+        case "Patchy light drizzle":
+        case "Light drizzle":
+        case "Freezing drizzle":
+        case "Heavy freezing drizzle":
+        case "Patchy light rain":
+        case "Light rain":
+        case "Moderate rain at times":
+        case "Moderate rain":
+        case "Heavy rain at times":
+        case "Heavy rain":
+        case "Light freezing rain":
+        case "Moderate or heavy freezing rain":
+        case "Light sleet":
+        case "Moderate or heavy sleet":
+        case "Light rain shower":
+        case "Moderate or heavy rain shower":
+        case "Torrential rain shower":
+        case "Light sleet showers":
+        case "Moderate or heavy sleet showers":
+        case "Moderate snow":
+        case "Moderate snow":
           $("body").addClass("rainy");
           break;
-        case "11d":
-        case "11n":
+        case "Patchy light rain with thunder":
+        case "Moderate or heavy rain with thunder":
+        case "Patchy light snow with thunder":
           $("body").addClass("thunderstorm");
           break;
-        case "13d":
+        case "Patchy light snow":
+        case "Light snow":
+        case "Patchy moderate snow":
+        case "Moderate snow":
+        case "Patchy heavy snow":
+        case "Heavy snow":
+        case "Ice pellets":
+        case "Moderate snow":
+        case "Light snow showers":
+        case "Moderate or heavy snow showers":
+        case "Light showers of ice pellets":
+        case "Moderate or heavy showers of ice pellets":
+        case "Light showers of ice pellets":
+        case "Light showers of ice pellets":
+          if(json.current.is_day === 1){
+            $("body").addClass("snowyDay");
+          } else {
+            $("body").addClass("snowyNight");
+          }
           $("body").addClass("snowyDay");
           break;
-        case "13n":
+        case "Blizzard":
+        case "Blowing snow":
+        case "Moderate or heavy snow with thunder":
           $("body").addClass("snowyNight");
           break;
-        case "50d":
-        case "50n":
+        case "Mist":
+        case "Fog":
+        case "Freezing fog":
           $("body").addClass("misty");
           break;
       }
