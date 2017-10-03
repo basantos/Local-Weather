@@ -78,7 +78,6 @@ $(document).ready(function(){
           } else {
             $("body").addClass("snowyNight");
           }
-          $("body").addClass("snowyDay");
           break;
         case "Blizzard":
         case "Blowing snow":
